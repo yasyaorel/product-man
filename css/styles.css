@@ -1,0 +1,410 @@
+@font-face {
+  font-family: "Raleway Regular";
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: "Raleway Black";
+  src: url(../fonts/Raleway-Black.ttf);
+}
+@font-face {
+  font-family: "Raleway SemiBoldItalic";
+  src: url(../fonts/Raleway-SemiBoldItalic.ttf);
+}
+@font-face {
+  font-family: "Roboto Black";
+  src: url(../fonts/Roboto-Black.ttf);
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto Regular";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "FontAwesome";
+  src: url(../fonts/fontawesome-webfont.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+* {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eeeeee;
+  color: #303030;
+}
+a {
+  text-decoration: none;
+}
+.ba-container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+.ba-header {
+  letter-spacing: 0.025em;
+}
+.ba-header__top {
+  padding-top: 37px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-content: center;
+  align-content: center;
+}
+.ba-header__logo {
+  font-family: "Roboto Black";
+  font-size: 48px;
+  line-height: 0.56;
+  color: #303030;
+}
+.ba-header__logo:hover {
+  transform: scale(1.1);
+}
+.ba-header__menu a {
+  font-family: "Roboto Regular";
+  font-size: 18px;
+  line-height: 1.5;
+}
+.ba-header__item1 {
+  margin-right: 35px;
+  color: #303030;
+}
+.ba-header__item1:hover {
+  text-decoration: underline;
+}
+.ba-header__item2 {
+  margin-right: 27px;
+  color: #303030;
+}
+.ba-header__item2:hover {
+  text-decoration: underline;
+}
+.ba-header__main {
+  padding-top: 90px;
+  height: 560px;
+  width: 100%;
+}
+.ba-header__info {
+  width: 53%;
+  text-align: right;
+  float: left;
+}
+.ba-header__img {
+  float: right;
+  width: 47%;
+  text-align: center;
+  background: url("../images/headphones.png") center no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 491px;
+  width: 365px;
+  /* margin-left: 100px; */
+}
+.ba-header__title {
+  font-family: "Raleway Black";
+  font-size: 140px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.ba-header__subtitle {
+  padding: 35px 0 20px 0;
+  font-family: "Roboto Light";
+  font-size: 24px;
+  line-height: 1.5;
+}
+.ba-header__link {
+  font-family: "Roboto Bold";
+  font-size: 24px;
+  line-height: 1.5;
+  color: #e10011;
+}
+.ba-header__hamburger {
+  display: inline-block;
+  width: 17px;
+}
+.ba-header__hamburger:hover {
+  transform: scale(1.15);
+}
+.ba-header__hamburger div {
+  height: 3px;
+  margin-top: 3px;
+  background: #303030;
+}
+.ba-header__separator {
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 104px;
+  width: 100%;
+  text-align: center;
+}
+.ba-header__circle {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 8px;
+  border-radius: 10px;
+  background: #303030;
+  cursor: pointer;
+}
+.ba-header__circle:hover {
+  background-color: #e10011;
+  transform: scale(1.15);
+}
+.ba-products {
+  width: 100%;
+  background-color: #FFF;
+  padding-top: 105px;
+  text-align: center;
+}
+.ba-products__title {
+  font-family: "Raleway Black";
+  font-size: 48px;
+}
+.ba-products__separator {
+  margin: 0 auto;
+  padding: 15px 0 12px 0;
+  background: url("../images/underline_star.png") center no-repeat;
+  height: 17px;
+  width: 213px;
+}
+.ba-products__text {
+  padding-bottom: 40px;
+  width: 55%;
+  margin: 0 auto;
+  font-family: "Raleway Regular";
+  font-size: 18px;
+  line-height: 1.3;
+}
+.ba-grid {
+  padding: 5% 5% 10%;
+  width: 100%;
+  height: 810px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: space-around;
+  align-content: space-around;
+  cursor: pointer;
+}
+.ba-grid__row-2-3 {
+  width: 66.6%;
+  height: 387px;
+}
+.ba-grid__row-1-3 {
+  width: 33.3%;
+  height: 387px;
+}
+.ba-grid__container {
+  /* height: 100%; */
+  -webkit-border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  text-align: left;
+  border-radius: 5px;
+  overflow: hidden;
+  font: 900 30px/1.3 'Roboto', Arial, sans-serif;
+}
+.ba-grid__container img {
+  display: block;
+  max-width: 100%;
+  /* height: auto; */
+}
+.ba-grid__container h4 {
+  position: absolute;
+  bottom: 20%;
+  max-width: 285px;
+  margin-left: 35px;
+}
+.ba-grid__container h4:after {
+  content: "";
+  display: block;
+  width: 112px;
+  height: 4px;
+  background: #FFF;
+  margin-top: 10px;
+}
+.ba-grid__container:hover .ba-grid__container-overlay {
+  opacity: 1;
+}
+.ba-grid__container-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e10011;
+  opacity: 0;
+}
+[class*="grid__row-"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1.5%;
+}
+.ba-news {
+  width: 100%;
+  padding-top: 105px;
+  text-align: center;
+  position: relative;
+}
+.ba-news__title {
+  padding-bottom: 15px;
+  font-family: "Raleway Black";
+  font-size: 48px;
+  text-transform: uppercase;
+}
+.ba-news__text {
+  padding-bottom: 35px;
+  width: 55%;
+  margin: 0 auto;
+  font-family: "Raleway Regular";
+  font-size: 18px;
+  line-height: 1.3;
+}
+.ba-news__email {
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 18px;
+  color: #979797;
+  bottom: 27px;
+  margin-left: 35px;
+}
+.ba-news__caret {
+  font-family: "FontAwesome";
+  font-size: 18px;
+  margin-left: 5px;
+}
+[type="email"] {
+  font-family: "Raleway SemiBoldItalic";
+  font-size: 18px;
+  width: 45%;
+  color: #979797;
+  padding: 24px 210px 24px 65px;
+  border-radius: 50px 0 0 50px;
+  border: none;
+}
+[type="submit"] {
+  font-family: "Roboto Black";
+  font-size: 18px;
+  letter-spacing: 0.025em;
+  color: #FFF;
+  background: #e10011;
+  padding: 24px 50px 24px 40px;
+  margin-left: -5px;
+  border: none;
+  -webkit-border-radius: 0 50px 50px 0;
+  border-radius: 0 50px 50px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  /* &:hover .fa {
+        color: @red-color;
+    } */
+}
+[type="submit"]:hover {
+  background: #303030;
+  color: #e10011;
+}
+.ba-footer {
+  position: relative;
+  text-align: center;
+}
+.ba-footer__social {
+  margin-top: 115px;
+}
+.ba-footer__social a {
+  position: absolute;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.ba-footer__social li {
+  display: inline-block;
+  position: relative;
+  padding: 0 45px;
+  left: -3%;
+}
+.ba-footer__social li a {
+  background-color: #fff;
+}
+.ba-footer__social li a .fa {
+  font-family: "FontAwesome";
+  font-size: 35px;
+  color: #979797;
+  padding-top: 18px;
+}
+.ba-footer__social p {
+  position: relative;
+  color: #979797;
+  font-family: "Raleway Regular";
+  font-size: 18px;
+  letter-spacing: 0.025em;
+  margin-bottom: 30px;
+  top: 130px;
+}
+.ba-footer__social span {
+  color: #303030;
+}
+.ba-footer__social-fb:hover {
+  background-color: #3B5998;
+}
+.ba-footer__social-fb:hover .fa {
+  color: #FFF;
+}
+.ba-footer__social-tw:hover {
+  background-color: #50C9F5;
+}
+.ba-footer__social-tw:hover .fa {
+  color: #FFF;
+}
+.ba-footer__social-yt:hover {
+  background-color: #e10011;
+}
+.ba-footer__social-yt:hover .fa {
+  color: #FFF;
+}
+.ba-footer__social-m:hover {
+  background-color: #02B875;
+}
+.ba-footer__social-m:hover .fa {
+  color: black;
+}
