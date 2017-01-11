@@ -55,9 +55,24 @@ body {
 a {
   text-decoration: none;
 }
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.ba-float-left {
+  float: left;
+}
+.ba-float-right {
+  float: right;
+}
 .ba-container {
-  width: 80%;
-  height: 100%;
+  max-width: 1240px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
 }
 .ba-header {
@@ -79,7 +94,7 @@ a {
   align-content: center;
 }
 .ba-header__logo {
-  font-family: "Roboto Black";
+  font-family: "Roboto Black", Arial, sans-serif;
   font-size: 48px;
   line-height: 0.56;
   color: #303030;
@@ -88,7 +103,7 @@ a {
   transform: scale(1.1);
 }
 .ba-header__menu a {
-  font-family: "Roboto Regular";
+  font-family: "Roboto Regular", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -107,9 +122,14 @@ a {
   text-decoration: underline;
 }
 .ba-header__main {
+  height: 640px;
   padding-top: 90px;
-  height: 560px;
-  width: 100%;
+}
+.ba-header--gradient {
+  background: url(../images/bg_gradient.png) no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .ba-header__info {
   width: 53%;
@@ -118,7 +138,7 @@ a {
 }
 .ba-header__img {
   float: right;
-  width: 47%;
+  margin-right: 100px;
   text-align: center;
   background: url("../images/headphones.png") center no-repeat;
   -webkit-background-size: cover;
@@ -126,22 +146,21 @@ a {
   background-size: cover;
   height: 491px;
   width: 365px;
-  /* margin-left: 100px; */
 }
 .ba-header__title {
-  font-family: "Raleway Black";
+  font-family: "Raleway Black", Arial, sans-serif;
   font-size: 140px;
   line-height: 1;
   text-transform: uppercase;
 }
 .ba-header__subtitle {
   padding: 35px 0 20px 0;
-  font-family: "Roboto Light";
+  font-family: "Roboto Light", Arial, sans-serif;
   font-size: 24px;
   line-height: 1.5;
 }
 .ba-header__link {
-  font-family: "Roboto Bold";
+  font-family: "Roboto Bold", Arial, sans-serif;
   font-size: 24px;
   line-height: 1.5;
   color: #e10011;
@@ -160,9 +179,8 @@ a {
 }
 .ba-header__separator {
   margin: 0 auto;
-  padding-top: 70px;
+  padding-top: 20px;
   padding-bottom: 104px;
-  width: 100%;
   text-align: center;
 }
 .ba-header__circle {
@@ -170,6 +188,7 @@ a {
   width: 13px;
   height: 13px;
   margin-right: 8px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
   background: #303030;
   cursor: pointer;
@@ -179,14 +198,14 @@ a {
   transform: scale(1.15);
 }
 .ba-products {
-  width: 100%;
   background-color: #FFF;
-  padding-top: 105px;
-  padding-bottom: 50px;
+  padding: 105px 40px 50px 40px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
   text-align: center;
 }
 .ba-products__title {
-  font-family: "Raleway Black";
+  font-family: "Raleway Black", Arial, sans-serif;
   font-size: 48px;
 }
 .ba-products__separator {
@@ -197,88 +216,65 @@ a {
   width: 213px;
 }
 .ba-products__text {
-  padding-bottom: 40px;
   width: 55%;
   margin: 0 auto;
-  font-family: "Raleway Regular";
+  font-family: "Raleway Regular", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.3;
 }
 .ba-grid {
-  padding: 10% 5% 15% 5%;
-  margin-top: 50px;
-  width: 100%;
-  height: 810px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-content: space-around;
-  align-content: space-around;
-  cursor: pointer;
+  margin-top: 35px;
+  padding: 32px;
 }
-.ba-grid__row-2-3 {
-  width: 66.6%;
-  /* height: 387px; */
-}
-.ba-grid__row-1-3 {
-  width: 33.3%;
-  /* height: 387px; */
+.ba-grid__row:first-child {
+  margin-bottom: 35px;
 }
 .ba-grid__container {
-  /* height: 100%; */
-  -webkit-border-radius: 5px;
-  /* display: inline-block; */
   position: relative;
-  color: #FFF;
-  text-decoration: none;
-  text-align: left;
-  border-radius: 5px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
   overflow: hidden;
-  font: 900 30px/1.3 'Roboto', Arial, sans-serif;
+}
+.ba-grid__container--center {
+  margin: 0 35px;
 }
 .ba-grid__container img {
   display: block;
-  max-width: 100%;
-  /* height: auto; */
 }
-.ba-grid__container h4 {
+.ba-grid__container-overlay {
   position: absolute;
-  bottom: 20%;
+  left: 0;
+  top: 0;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-color: #e10011;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+.ba-grid__container-overlay:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.ba-grid__container-overlay--text {
+  position: absolute;
+  bottom: 42px;
   max-width: 285px;
+  color: #FFF;
+  text-align: left;
+  font: 900 30px/1.3 'Roboto', Arial, sans-serif;
+}
+.ba-grid__container-overlay--text h4 {
+  bottom: 20%;
   margin-left: 35px;
 }
-.ba-grid__container h4:after {
+.ba-grid__container-overlay--text h4:after {
   content: "";
   display: block;
   width: 112px;
   height: 4px;
   background: #FFF;
   margin-top: 10px;
-}
-.ba-grid__container:hover .ba-grid__container-overlay {
-  opacity: 1;
-}
-.ba-grid__container-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #e10011;
-  opacity: 0;
-}
-[class*="grid__row-"] {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 2%;
 }
 .ba-news {
   width: 100%;
@@ -288,7 +284,7 @@ a {
 }
 .ba-news__title {
   padding-bottom: 15px;
-  font-family: "Raleway Black";
+  font-family: "Raleway Black", Arial, sans-serif;
   font-size: 48px;
   text-transform: uppercase;
 }
@@ -296,7 +292,7 @@ a {
   padding-bottom: 35px;
   width: 55%;
   margin: 0 auto;
-  font-family: "Raleway Regular";
+  font-family: "Raleway Regular", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.3;
 }
@@ -314,7 +310,7 @@ a {
   margin-left: 5px;
 }
 [type="email"] {
-  font-family: "Raleway SemiBoldItalic";
+  font-family: "Raleway SemiBoldItalic", Arial, sans-serif;
   font-size: 18px;
   width: 45%;
   color: #979797;
@@ -323,7 +319,7 @@ a {
   border: none;
 }
 [type="submit"] {
-  font-family: "Roboto Black";
+  font-family: "Roboto Black", Arial, sans-serif;
   font-size: 18px;
   letter-spacing: 0.025em;
   color: #FFF;
@@ -335,9 +331,6 @@ a {
   border-radius: 0 50px 50px 0;
   text-transform: uppercase;
   cursor: pointer;
-  /* &:hover .fa {
-        color: @red-color;
-    } */
 }
 [type="submit"]:hover {
   background: #303030;
@@ -377,7 +370,7 @@ a {
 .ba-footer__social p {
   position: relative;
   color: #979797;
-  font-family: "Raleway Regular";
+  font-family: "Raleway Regular", Arial, sans-serif;
   font-size: 18px;
   letter-spacing: 0.025em;
   margin-bottom: 30px;
